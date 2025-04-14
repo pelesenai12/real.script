@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="script.js"></script>
+<body>
+    <form>
+        <h1>LOJA DE CONSTRUÇAO FERRAGENS DO JOAO</h1>
+        <label for="produto">Produto:</label><!--Esse campo permite que o usuário digite qualquer texto. Não há restrição quanto ao tipo de conteúdo (pode ser letras, números ou caracteres especiais). Ele é adequado para dados que exigem um valor textual, como o nome de um produto.-->
+        <select id="produto">
+            <option value="">selecione o produto</option>
+            <option value="parafuso">parafuso</option>
+            <option value="martelo">martelo</option>
+            <option value="chave de fenda">chave de fenda</option>
+
+    
+        </select> 
+      
+        <label for="quantidade">Quantidade:</label> <!--Esse campo é restrito para valores numéricos. O usuário só pode inserir números, e o campo tem restrições adicionais-->
+        <input type="number" id="quantidade" name="quantidade" min="1" step="1" value="1"><br><br>
+      
+        <button onclick="ADICIONAAOCARRINHO()"> ADICIONAR AO CARRINHO</button> 
+        <button onclick="calcularPreco()">Calcular Preço</button> 
+    
+    </form>
+</body>
+</html>
