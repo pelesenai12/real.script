@@ -1,45 +1,43 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja de Construção Ferragens do João</title>
+  <title>Ferragens João - Loja de Construção</title>
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-  <link rel="stylesheet" href="staly.css" />
-  
 </head>
 <body>
-  <form action="#" method="post">
-    <h1>Loja de Construção Ferragens do João</h1>
+  <main>
+    <section class="container">
+      <h1>Ferragens João</h1>
+      <form id="formulario" method="post">
+        <div class="form-group">
+          <label for="produto">Produto:</label>
+          <select id="produto" name="produto" required onchange="mostrarPreco()">
+            <option value="">Selecione o produto</option>
+            <option value="martelo">Martelo</option>
+            <option value="pregos">Pregos</option>
+            <option value="parafusos">Parafusos</option>
+          </select>
+        </div>
 
-    <label for="produto">Produto:</label>
-    <select id="produto" name="produto" required onchange="mostrarPreco()">
-      <option value="">Selecione o produto</option>
-      <option value="martelo">Martelo</option>
-      <option value="pregos">Pregos</option>
-      <option value="parafusos">Parafusos</option>
-    </select>
+        <div class="form-group">
+          <label for="quantidade">Quantidade:</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" step="1" value="1" required
+        />
+        </div>
 
-    <label for="quantidade">Quantidade:</label>
-    <input 
-      type="number" 
-      id="quantidade" 
-      name="quantidade" 
-      min="1" 
-      step="1" 
-      value="1" 
-      required
-    />
+        <div id="precoProduto" class="info"></div>
+        <div id="estoqueProduto" class="info"></div>
 
-    <div id="precoProduto"></div>
-    <div id="estoqueProduto"></div>
+        <div class="form-actions">
+          <button type="button" onclick="calcular()">Calcular Preço</button>
+        </div>
 
-    <br /><br />
-    <div id="resultado"></div>
-    <button type="button" onclick="calcular()">Calcular Preço</button>
-
-</form>
-
-  
+        <div id="resultado" class="resultado"></div>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
