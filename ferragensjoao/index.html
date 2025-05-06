@@ -14,7 +14,7 @@
       <form id="formulario" method="post">
         <div class="form-group">
           <label for="produto">Produto:</label>
-          <select id="produto" name="produto" required onchange="mostrarPreco()">
+          <select id="produto" name="produto" required aria-label="Escolha um produto" onchange="mostrarPreco()">
             <option value="">Selecione o produto</option>
             <option value="martelo">Martelo</option>
             <option value="pregos">Pregos</option>
@@ -24,8 +24,16 @@
 
         <div class="form-group">
           <label for="quantidade">Quantidade:</label>
-          <input type="number" id="quantidade" name="quantidade" min="1" step="1" value="1" required
-        />
+          <input 
+            type="number" 
+            id="quantidade" 
+            name="quantidade" 
+            min="1" 
+            step="1" 
+            value="1" 
+            required 
+            aria-label="Quantidade de produto" 
+            placeholder="Insira a quantidade" />
         </div>
 
         <div id="precoProduto" class="info"></div>
@@ -41,3 +49,4 @@
   </main>
 </body>
 </html>
+
