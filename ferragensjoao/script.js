@@ -1,9 +1,15 @@
 // Simulação de dados de produtos
 const produtos = {
-  martelo: { preco: 25.90, estoque: 15 },
-  pregos: { preco: 10.00, estoque: 1000 },
-  parafusos: { preco:20.00, estoque: 500 }
-};
+  martelo: 25.90,
+  pregos: 10.00,
+  parafusos:  20.00, 
+}
+
+const estoque ={
+  martelo :100,
+  prego :100,
+  parafuso:100,
+}
 
 // Função para exibir preço e estoque
 function mostrarPreco() {
@@ -60,7 +66,17 @@ function calcular() {
   // Calcula o total
   const total = preco * quantidade;
   resultadoDiv.innerHTML = `<strong>Total a pagar:</strong> R$ ${total.toFixed(2)}`;
+  if(estoque[escolha] - quantidade >= 0){
+  document. getElementById("resultado").innerHTML = valortotal.toFixed(2);
+  estoque[escolha] -= qtd; 
+  window.alert("compra realizada com sucesso" +"valor total:"+ valortotal.toFixed(2))
+  }else{
+    window.alert("estoque indisponivel")
+  }
+  console.log(estoque[escolha])
+
 }
+
 
 
 
